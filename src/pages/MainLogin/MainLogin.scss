@@ -1,0 +1,78 @@
+@use '../../styles/base';
+@use '../../styles/colors';
+
+
+.main__content {
+  background-color: colors.$dark-000;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 30px 30px;
+  
+  h1 {
+    font-size: 4.2em;
+  }
+}
+
+.twitter-icon {
+  color: colors.$blue-100;
+  font-size: 3rem;
+}
+
+.main__banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: colors.$blue-100; 
+  .banner-icon {
+    font-size: 50vw;
+    color: colors.$dark-000;
+  }
+}
+
+.signbox {
+  margin: 10px 0;
+  max-width: 300px;
+
+  h2 {
+    font-size: 2.1em;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  > * {
+    margin: 10px 0px;
+  }
+}
+
+.signbox__join {
+  > button {
+    margin: 8px 0px;
+  }
+}
+
+.divider {
+  display: flex;
+  flex-direction: row;
+
+  &::before,
+  &::after {
+    content: "";
+    flex: 1 1;
+    border-bottom: 1px solid colors.$dark-300;
+    margin: auto;
+  }
+  &::after {
+    margin-right: 10px;
+  }
+  &::before {
+    margin-left: 10px;
+  }
+  span {
+    margin: 0 5px;
+  }
+}

@@ -1,0 +1,48 @@
+$twitter-main-blue-color : rgb(29, 155, 240);
+$text-color-white: white;
+@use '/src/styles/colors';
+
+%base-btn {
+  border-radius: 100px;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  border: none;
+  padding: 10px 0px;
+  font-weight: 800;
+  > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.filled{
+  @extend %base-btn;
+  background-color: colors.$blue-100;
+  color: colors.$dark-000;
+  &:hover {
+    background-color: colors.$blue-200;
+    transition: all ease-out 0.3s;
+  }
+}
+
+.transparent {
+  @extend %base-btn;
+  background-color: transparent;
+  border: 1px solid colors.$dark-300;
+  &:hover {
+    background-color: colors.$dark-100;
+    transition: all ease-out 0.3s;
+  }
+}
+
+.lightblue {
+  @extend %base-btn;
+  background-color: transparent;
+  color: colors.$blue-100;
+  border: 1px solid colors.$dark-300;
+  &:hover {
+    background-color: colors.$blue-000;
+    transition: all ease-out 0.3s;
+  }
+}
